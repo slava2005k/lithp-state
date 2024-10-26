@@ -12,6 +12,7 @@
 body, html {
   height: 100%;
   background-color: #101010;
+  font-size: 4vw;
 }
 
 .container {
@@ -98,8 +99,6 @@ a:hover{
     color: #ff7000;
 }
 header>img{
-    height: 2vw;
-    width: 2vw;
     margin-left: 1px;
     margin-right: 15px;
 }
@@ -174,7 +173,12 @@ animation: fadeIn 0.5s ease-out forwards;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
 }
 
-
+@media (orientation: landscape){
+    header>img{
+        height: 2vw;
+        width: 2vw;
+    }
+}
 @media (orientation: portrait){
     header{
         position: static;
@@ -188,5 +192,26 @@ animation: fadeIn 0.5s ease-out forwards;
     }
     .news-items{
     grid-template-columns: auto;
+    }
+    .news-item{
+        border: none;
+        max-width: 90vw;
+    }
+    .news-item:hover{
+        border: none;
+    }
+    header{
+        height: 7vw;
+    }
+    header>img{
+        height: 6vw;
+        width: 6vw;
+    }
+    .name{
+        font-size: 5vw;
+        color: #ff7000;
+    }
+    .cent{
+        font-size: 3vw;
     }
 }
