@@ -104,10 +104,10 @@ header>img{
     margin-right: 15px;
 }
 .mix{
-    z-index: 0;
+    z-index: -1;
     display: flex;
     position: absolute;
-    top: 35vw;
+    top: 90%;
     mix-blend-mode: lighten;
     height: 50vw;
     max-width: 100%;
@@ -172,4 +172,21 @@ animation: fadeIn 0.5s ease-out forwards;
   position: absolute;
   color: #fff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+
+@media (orientation: portrait){
+    header{
+        position: static;
+    }
+    .mix{
+        display: none;
+    }
+    .news{
+        font-size: 2.5vw;
+        text-align: left;
+    }
+    .news-items{
+    grid-template-columns: auto;
+    }
 }
