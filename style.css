@@ -9,6 +9,138 @@
   src: url('fonts/Minecraft-rus.otf') format('truetype');
 }
 
+body, html {
+  height: 100%;
+  background-color: #101010;
+  font-size: 4vw;
+}
+
+.container {
+    justify-content: space-evenly;
+    align-items: flex-end;
+    display: flex;
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+}
+
+.block{
+    margin-top: 3.5vw;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    font-size: 2vw;
+    font-family: 'Minecraft rus', sans-serif;
+}
+
+.circle {
+  font-size: 6vw;
+  font-family: 'Minecraft rus', sans-serif;
+margin-top: 10vw;
+margin-left: 70vw;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1vw solid #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news{
+    display: block;
+    background-color: #07210021;
+    margin-top: 10vw;
+    text-align: justify;
+    color: white;
+    font-size: 1vw;
+    font-family: 'Minecraft rus', sans-serif;
+    justify-items: center;
+}
+.news-items{
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: auto auto;
+
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+}
+.news-item{
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 20%;
+    position: relative;
+    padding: 20px;
+    max-width: 45vw;
+}
+.news-item:hover{
+    background-color: black;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25%;
+}
+
+header{
+    top: 0px;
+    z-index: 5;
+    position: fixed;
+    padding: 2px;
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2.5px);
+    font-family: 'Minecraft rus', sans-serif;
+}
+a{
+    color: #00b5ff;
+}
+a:hover{
+    color: #ff7000;
+}
+header>img{
+    margin-left: 1px;
+    margin-right: 15px;
+}
+.mix{
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    top: 90%;
+    mix-blend-mode: lighten;
+    height: 50vw;
+    max-width: 100%;
+}
+.name{
+    font-size: 1.5vw;
+    color: #ff7000;
+}
+.cent{
+    margin-top: 2px;
+    font-size: 1vw;
+    margin-left: 5vw;
+    color: white;
+    text-align: center;
+}
+footer{
+    color: darkgrey;
+    text-align: center;
+    padding: 2%;
+    margin-top: 10%;
+    font-size: 8pt;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 0; /* Изначальная высота — обновляется в JS */
+  background-color: red; /* Изначальный цвет */
+  transition: height 1s cubic-bezier(0.34, 0.38, 0.64, 1.12), background-color 1s ease-in-out;
+  animation: wave 4s infinite cubic-bezier(0.46, 0.26, 0.72, 0.89);
+  box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
 @keyframes wave {
   0% {
     transform: rotate(-4deg);
@@ -42,139 +174,10 @@ animation: fadeIn 0.5s ease-out forwards;
 }
 
 @media (orientation: landscape){
-  body, html {
-    height: 100%;
-    background-color: #101010;
-    font-size: 4vw;
-  }
-  
-  .container {
-      justify-content: space-evenly;
-      align-items: flex-end;
-      display: flex;
-      position: relative;
-      width: 30vw;
-      height: 30vw;
-  }
-  
-  .block{
-      margin-top: 3.5vw;
-      text-align: center;
-      color: white;
-      padding: 20px;
-      width: 100%;
-      font-size: 2vw;
-      font-family: 'Minecraft rus', sans-serif;
-  }
-  
-  .circle {
-    font-size: 6vw;
-    font-family: 'Minecraft rus', sans-serif;
-  margin-top: 10vw;
-  margin-left: 70vw;
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    border: 1vw solid #fff;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .news{
-      display: block;
-      background-color: #07210021;
-      margin-top: 10vw;
-      text-align: justify;
-      color: white;
-      font-size: 1vw;
-      font-family: 'Minecraft rus', sans-serif;
-      justify-items: center;
-  }
-  .news-items{
-      display: grid;
-      grid-auto-flow: row dense;
-      grid-template-columns: auto auto;
-  
-      justify-content: center;
-      align-items: start;
-      justify-items: center;
-  }
-  .news-item{
-      border: 2px solid rgba(0, 0, 0, 0);
-      border-radius: 20%;
-      position: relative;
-      padding: 20px;
-      max-width: 45vw;
-  }
-  .news-item:hover{
-      background-color: black;
-      border: 2px solid rgb(255, 255, 255);
-      border-radius: 25%;
-  }
-  
-  header{
-      top: 0px;
-      z-index: 5;
-      position: fixed;
-      padding: 2px;
-      display: flex;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(2.5px);
-      font-family: 'Minecraft rus', sans-serif;
-  }
-  a{
-      color: #00b5ff;
-  }
-  a:hover{
-      color: #ff7000;
-  }
-  header>img{
-      margin-left: 1px;
-      margin-right: 15px;
-      height: 2vw;
-      width: 2vw;
-  }
-  .mix{
-      z-index: -1;
-      display: flex;
-      position: absolute;
-      top: 90%;
-      mix-blend-mode: lighten;
-      height: 50vw;
-      max-width: 100%;
-  }
-  .name{
-      font-size: 1.5vw;
-      color: #ff7000;
-  }
-  .cent{
-      margin-top: 2px;
-      font-size: 1vw;
-      margin-left: 5vw;
-      color: white;
-      text-align: center;
-  }
-  footer{
-      color: darkgrey;
-      text-align: center;
-      padding: 2%;
-      margin-top: 10%;
-      font-size: 8pt;
-  }
-  
-  .water {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 0; /* Изначальная высота — обновляется в JS */
-    background-color: red; /* Изначальный цвет */
-    transition: height 1s cubic-bezier(0.34, 0.38, 0.64, 1.12), background-color 1s ease-in-out;
-    animation: wave 4s infinite cubic-bezier(0.46, 0.26, 0.72, 0.89);
-    box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.3);
-  }
+    header>img{
+        height: 2vw;
+        width: 2vw;
+    }
 }
 @media (orientation: portrait){
     header{
