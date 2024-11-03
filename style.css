@@ -37,8 +37,8 @@ body, html {
 .circle {
   font-size: 6vw;
   font-family: 'Minecraft rus', sans-serif;
-margin-top: 10vw;
-margin-left: 70vw;
+  margin-top: 10vw;
+  margin-left: 70vw;
   position: absolute;
   width: 80%;
   height: 80%;
@@ -82,15 +82,15 @@ margin-left: 70vw;
 }
 
 header{
-    top: 0px;
-    z-index: 5;
-    position: fixed;
-    padding: 2px;
-    display: flex;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(2.5px);
-    font-family: 'Minecraft rus', sans-serif;
+  top: 0px;
+  z-index: 5;
+  position: fixed;
+  padding: 2px;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2.5px);
+  font-family: 'Minecraft rus', sans-serif;
 }
 a{
     color: #00b5ff;
