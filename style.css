@@ -23,7 +23,7 @@ body, html {
     width: 30vw;
     height: 30vw;
 }
-u{
+b{
   color: #ff7000;
 }
 .block{
@@ -219,3 +219,4 @@ animation: fadeIn 0.5s ease-out forwards;
     }
 
 }
+
