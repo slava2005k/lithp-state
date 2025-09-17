@@ -23,7 +23,9 @@ body, html {
     width: 30vw;
     height: 30vw;
 }
-
+u{
+  color: #ff7000;
+}
 .block{
     margin-top: 3.5vw;
     text-align: center;
@@ -215,4 +217,5 @@ animation: fadeIn 0.5s ease-out forwards;
     .cent{
         font-size: 3vw;
     }
+
 }
