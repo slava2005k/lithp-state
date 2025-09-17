@@ -22,6 +22,20 @@ function updateProgress(percentage) {
   water.style.backgroundColor = color;
 }
 
-// Задаём процент готовности
+// Задаём процент готовности и анимируем от 0 до значения
 const staticProgress = 85;
-updateProgress(staticProgress);
+const duration = 900; // ms
+let startTime = null;
+
+function animateProgress(timestamp) {
+  if (!startTime) startTime = timestamp;
+  const elapsed = timestamp - startTime;
+  const t = Math.min(elapsed / duration, 1);
+  const current = Math.round(t * staticProgress);
+  updateProgress(current);
+  if (t < 1) {
+    requestAnimationFrame(animateProgress);
+  }
+}
+
+requestAnimationFrame(animateProgress);
