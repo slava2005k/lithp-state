@@ -23,5 +23,5 @@ function updateProgress(percentage) {
 }
 
 // Задаём процент готовности
-const staticProgress = 30;
+const staticProgress = 85;
 updateProgress(staticProgress);
