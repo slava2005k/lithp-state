@@ -37,11 +37,7 @@ main{
   filter: blur(250px);
   opacity: 0;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle at center,
-    #700000  0%,
-    rgb(1, 255, 1) 40%,
-    #3a1900  70%,
-    rgba(255, 0, 0, 0.397) 100%);
+  background: radial-gradient(circle,rgba(0, 255, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
 
   animation: 
   opacity-on 2s ease-in-out forwards 0.2s,
