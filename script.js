@@ -23,7 +23,7 @@ function updateProgress(percentage) {
 }
 
 // Задаём процент готовности и анимируем от 0 до значения
-const staticProgress = 85;
+const staticProgress = 99;
 const duration = 900; // ms
 let startTime = null;
 
