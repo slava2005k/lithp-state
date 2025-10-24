@@ -12,14 +12,10 @@
     return Date.UTC(dateObj.year, dateObj.month, dateObj.day, 17 - MSK_OFFSET_HOURS, 0, 0, 0);
   }
 
-  function getNextTargetUtc(){
+  function getTargetUtc(){
     const now = new Date();
     const y = now.getFullYear(), m = now.getMonth(), d = now.getDate();
     let t = targetUtcMsFor({year:y,month:m,day:d});
-    if (t <= nowUtcMs()){
-      const next = new Date(Date.UTC(y,m,d,0,0,0) + 24*60*60*1000);
-      t = targetUtcMsFor({year:next.getUTCFullYear(), month:next.getUTCMonth(), day:next.getUTCDate()});
-    }
     return t;
   }
 
@@ -27,11 +23,12 @@
 
   function update(){
     const nowUtc = nowUtcMs();
-    const targetUtc = getNextTargetUtc();
+    const targetUtc = getTargetUtc();
     let diff = targetUtc - nowUtc;
     if (diff <= 0){
       D.textContent = '0'; H.textContent='00'; M.textContent='00'; S.textContent='00';
       TIMER.style.display='none'; DONE.style.display='block'; BAR.style.width='100%';
+      clearInterval(interval);
       return;
     }
 
@@ -61,9 +58,10 @@
 
     if (days===0 && hours===0 && minutes===0 && seconds===0){
       TIMER.style.display='none'; DONE.style.display='block'; BAR.style.width='100%';
+      clearInterval(interval);
     }
   }
 
   update();
-  setInterval(update, 250);
+  let interval = setInterval(update, 250);
 })();
