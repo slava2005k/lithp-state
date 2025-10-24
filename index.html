@@ -8,34 +8,25 @@
   <link rel="shortcut icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-  <div class="bg">
-    <div class="bg-circle"></div>
-    
-  </div>
-
-  <header><img src="images/logo.png"><div class="name">LitHP</div><div class="cent">Посети <a href="https://limeplay-community.gitbook.io/lithp-wiki">wiki</a> и узнай больше о проекте!</div></header>
+  <header>
+    <img src="images/logo.png">
+    <div class="name">LitHP</div>
+    <div class="cent">Посети <a href="https://limeplay-community.gitbook.io/lithp-wiki">wiki</a> и узнай больше о проекте!</div>
+  </header>
   <main>
-    <div class="block">
-      <div class="mix"><img src="images/fire.gif"></div>
-      <h2>Готовность <b>бета-версии</b></h2><br></div>
-    <div class="container">
-      <div class="circle">
-        <div class="water" id="water"></div>
-        <div class="percentage" id="percentage">0%</div>
+    <div class="wrap">
+      <div class="block" role="region" aria-live="polite">
+        <h2><b>До старта бета-версии: </b></h2><br></div>
+        <div id="timer" class="timer" aria-hidden="false">
+          <div class="block"><div id="d" class="num">0</div><div class="lbl">дн</div></div>
+          <div class="block"><div id="h" class="num">00</div><div class="lbl">ч</div></div>
+          <div class="block"><div id="m" class="num">00</div><div class="lbl">м</div></div>
+          <div class="block"><div id="s" class="num">00</div><div class="lbl">с</div></div>
+        </div>
+        <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
       </div>
     </div>
-    <div class="news">
-      <!--<h2>Последние новости</h2><br>
-      <div class="news-items">
-      </div>-->
-    </div>
   </main>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
-
-
-
-
-
-

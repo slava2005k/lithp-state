@@ -18,6 +18,10 @@ body, html {
 
 main{
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .bg {
@@ -37,7 +41,7 @@ main{
   filter: blur(250px);
   opacity: 0;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle,rgba(0, 255, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(circle,rgba(255, 112, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
 
   animation: 
   opacity-on 2s ease-in-out forwards 0.2s,
@@ -53,19 +57,20 @@ main{
     height: 30vw;
 }
 b{
-  color: #ff7000;
-  text-shadow: 3px 3px 5px #f80000;
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
 }
 .block{
-    margin-top: 3.5vw;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 1vw;
     width: 100%;
     font-size: 2vw;
     font-family: 'Minecraft rus', sans-serif;
 }
-
+  .num{font-size:8vw;font-weight:800;line-height:1.2;color:#ff7000;text-shadow: 3px 3px 5px #f80000;}
+  .lbl{font-size:2vw;color:#b8c2bf;margin-top:6px;font-weight:600}
+  
 .circle {
   opacity: 0.95;
   font-size: 6vw;
@@ -129,7 +134,7 @@ a{
     color: #ff7000;
 }
 a:hover{
-    color: #f80000;
+    color: #ffffff;
 }
 header>img{
     margin-left: 1px;
@@ -227,6 +232,38 @@ animation: fadeIn 0.5s ease-out forwards;
   text-shadow: 0 4px 20px rgba(255, 255, 255, 0.75);
 }
 
+.timer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.progress {
+  width: 80vw;
+  height: 1vw;
+  background: rgba(0,0,0,0.1);
+  margin: 2vw auto;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+
+.bar {
+  display: none;
+
+  background: #ffffff;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.card {
+  background: rgba(0,0,0,0.1);
+  padding: 2vw;
+  border-radius: 2vw;
+  backdrop-filter: blur(5px);
+}
+
 @media (orientation: landscape){
     header>img{
         height: 2vw;
@@ -274,4 +311,3 @@ animation: fadeIn 0.5s ease-out forwards;
     }
   
 }
-
