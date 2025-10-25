@@ -1,4 +1,3 @@
-<script>
 (function(){
   const MSK_OFFSET_HOURS = 0; 
   const D = document.getElementById('d'),
@@ -53,4 +52,3 @@
   update();
   const interval = setInterval(update, 250);
 })();
-</script>
